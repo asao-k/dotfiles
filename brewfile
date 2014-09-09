@@ -1,0 +1,101 @@
+#====================================
+# 実行方法
+# Brewfileのあるディレクトリで`brew bundle`
+#====================================
+
+# Make sure using latest Homebrew
+update || true
+
+# Update already-installed formula
+upgrade || true
+
+# Add Repository
+tap homebrew/versions    || true
+tap phinze/homebrew-cask || true
+tap homebrew/binary      || true
+tap thoughtbot/formulae  || true
+
+# Packages
+
+## Shell
+install zsh   || true
+install zsh-completions || true
+install mobile-shell || true
+
+## Git
+install git   || true
+install hub   || true
+install gitsh || true
+install gist  || true
+install tig   || true
+install gibo  || true
+
+## Utils
+install wget      || true
+install curl      || true
+install tmux      || true
+install jenkins   || true
+install numpy     || true
+install autoconf  || true
+insatll macvim    || true
+install openssl   || true
+install nkf       || true
+install readline  || true
+install libyaml   || true
+install rmtrash   || true
+install reattach-to-user-namespace || true
+install fontforge || true
+install gcc || true
+install gfortran || true
+
+## Database
+## install postgresql || true
+## install mysql     || true
+## install sqlite    || true
+## install mogenerator || true
+
+
+## Languages
+## install rbenv            || true
+## install pyenv            || true
+## install plenv            || true
+## install ruby-build       || true
+## install pyenv-virtualenv || true
+## install perl-build       || true
+## install go               || true
+## install python           || true
+## install python3          || true
+
+## DevOps
+## install docker      || true
+## install boot2docker || true
+## install packer      || true
+
+## Image
+## install imagemagick || true
+
+# Casks
+install brew-cask
+cask install google-chrome || true
+cask install iterm2        || true
+cask install dropbox       || true
+cask install virtualbox    || true
+cask install vagrant       || true
+cask install alfred        || true
+cask install evernote      || true
+cask install kobito        || true
+cask install sublime-text  || true
+cask install coteditor     || true
+cask install shiftit       || true
+cask install wunderlist    || true
+cask install xtrafinder    || true
+cask install pckeyboardhack  || true
+cask install keyremap4macbook  || true
+cask install lastpass-universal  || true
+cask install skype  || true
+cask install google-drive  || true
+cask install google-japanese-ime  || true
+
+
+# Remove outdated versions
+cleanup
